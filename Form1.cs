@@ -28,7 +28,10 @@ namespace baif13_canchi
             string[] chiarr = { "Thân", "Dậu", "Tuất", "Hợi", "Tý", "Sửu", "Dần", "Mẹo", "Thìn", "Tỵ", "Ngọ", "Mùi" };
             string giatritrave = canarr[Convert.ToInt32(txtnam.Text) % 10] + " " + chiarr[Convert.ToInt32(txtnam.Text) % 12];
             txtkq.Text = giatritrave;
-
+            for (int nam = 2000; nam <= 2050; nam++)
+            {
+                lstnam.Items.Add(nam + " - " + canarr[nam % 10] + " " + chiarr[nam % 12]);
+            }
         }
 
         private void btnexit_Click(object sender, EventArgs e)
@@ -38,10 +41,7 @@ namespace baif13_canchi
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            for (int nam = 2000; nam <= 2050; nam++)
-            {
-                lstnam.Items.Add(nam);
-            }
+            
 
         }
     }
